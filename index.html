@@ -1375,7 +1375,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <h3 class="text-2xl font-serif font-semibold text-navy mb-3">Thank You!</h3>
-                <p class="text-elegant-gray mb-6">Your inquiry has been received. Our team will contact you within 24 hours.</p>
+                <p class="text-elegant-gray mb-6">You will be redirected to WhatsApp to send your inquiry to our team.</p>
                 <button type="button" class="btn-secondary" id="resetForm">Submit Another Inquiry</button>
               </div>
             </form>
@@ -2142,14 +2142,40 @@
       enquiryForm.addEventListener('submit', (e) => {
         e.preventDefault();
         if (validateStep(currentStep)) {
-          currentStep = 'success';
-          formSteps.forEach(s => s.classList.add('hidden'));
-          document.querySelector('.form-step[data-step="success"]').classList.remove('hidden');
-          progressSteps.forEach(s => {
-            s.classList.remove('active');
-            s.classList.add('completed');
-          });
-          progressLines.forEach(l => l.classList.add('completed'));
+          const formData = new FormData(enquiryForm);
+          const name = formData.get('name') || '';
+          const phone = formData.get('phone') || '';
+          const email = formData.get('email') || '';
+          const company = formData.get('company') || '';
+          const serviceValue = formData.get('service') || '';
+          const message = formData.get('message') || '';
+          
+          const serviceMap = {
+            hospitality: 'Hospitality & Food',
+            beauty: 'Beauty & Wellness',
+            interior: 'Interior Design',
+            business: 'Business Solutions',
+            events: 'Event Management',
+            realestate: 'Real Estate',
+            consulting: 'Consulting'
+          };
+          const serviceLabel = serviceMap[serviceValue] || serviceValue;
+          
+          const whatsappText = `Hello UniverseGroups,
+
+I am interested in your services. Please find my details below:
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Company: ${company || 'N/A'}
+Service: ${serviceLabel}
+Message: ${message || 'N/A'}
+
+Please contact me.`;
+          
+          const whatsappUrl = `https://wa.me/919940852844?text=${encodeURIComponent(whatsappText)}`;
+          window.location.href = whatsappUrl;
         }
       });
       
