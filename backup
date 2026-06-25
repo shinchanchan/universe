@@ -1,0 +1,2220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>UniverseGroups | Opportunity Starts Here</title>
+  <meta name="description" content="UniverseGroups is a global network of specialized companies delivering workforce and business solutions across hospitality, real estate, beauty, events, and consulting.">
+  <meta name="keywords" content="UniverseGroups, corporate group, business solutions, hospitality, real estate, consulting, cafe, restaurant, beauty, events">
+  <meta name="author" content="UniverseGroups">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.universegroups.com/">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="UniverseGroups | Opportunity Starts Here">
+  <meta property="og:description" content="A global network of specialized companies united by one purpose: creating opportunities for people and businesses to grow and thrive.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.universegroups.com/">
+  <meta property="og:image" content="https://www.universegroups.com/og-image.jpg">
+  <meta property="og:site_name" content="UniverseGroups">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UniverseGroups | Opportunity Starts Here">
+  <meta name="twitter:description" content="A global network of specialized companies united by one purpose: creating opportunities for people and businesses to grow and thrive.">
+  <meta name="twitter:image" content="https://www.universegroups.com/og-image.jpg">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0F172A">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- DaisyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0F172A',
+            'elegant-gray': '#64748B',
+            'premium-gold': '#D4A017',
+            'premium-gold-light': '#E8B923',
+            'soft-white': '#FAFBFC'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UniverseGroups",
+    "url": "https://www.universegroups.com",
+    "logo": "https://www.universegroups.com/logo.svg",
+    "description": "Global network of specialized companies delivering workforce and business solutions.",
+    "sameAs": [
+      "https://www.linkedin.com/company/universegroups",
+      "https://twitter.com/universegroups",
+      "https://www.instagram.com/universegroups"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-44-1234-5678",
+      "contactType": "customer service",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
+  
+  <style>
+    /* CSS Variables */
+    :root {
+      --color-navy: #0F172A;
+      --color-gray: #64748B;
+      --color-gold: #D4A017;
+      --color-gold-light: #E8B923;
+      --color-white: #FFFFFF;
+      --color-soft: #FAFBFC;
+      --header-height: 96px;
+      --header-shrink: 72px;
+      --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-white);
+      color: var(--color-navy);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Scroll Progress Bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+    
+    /* Loading Screen */
+    .loader-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    
+    .loader-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    
+    .loader-ring {
+      width: 64px;
+      height: 64px;
+      border: 3px solid rgba(212, 160, 23, 0.15);
+      border-top-color: var(--color-gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Header Styles */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--header-height);
+      transition: var(--transition-smooth);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    }
+    
+    .site-header.scrolled {
+      height: var(--header-shrink);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 30px rgba(15, 23, 42, 0.08);
+    }
+    
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      color: var(--color-navy);
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-gold);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      color: var(--color-gold);
+    }
+    
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 320px;
+      max-width: 85vw;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      z-index: 1100;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: -10px 0 40px rgba(15, 23, 42, 0.12);
+      overflow-y: auto;
+    }
+    
+    .mobile-drawer.open {
+      right: 0;
+    }
+    
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.4);
+      z-index: 1050;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .drawer-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: var(--header-height);
+    }
+    
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(212, 160, 23, 0.15);
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      25% { transform: translateY(-20px) translateX(10px); }
+      50% { transform: translateY(-10px) translateX(-10px); }
+      75% { transform: translateY(-30px) translateX(5px); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-illustration {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+      color: var(--color-white);
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 8px;
+      transition: var(--transition-smooth);
+      box-shadow: 0 10px 30px rgba(212, 160, 23, 0.25);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(212, 160, 23, 0.35);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-navy);
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: 2px solid rgba(15, 23, 42, 0.15);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold);
+      transform: translateY(-2px);
+    }
+    
+    /* Glass Cards */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06);
+      transition: var(--transition-smooth);
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+    }
+    
+    /* Section Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    
+    /* Company Cards */
+    .company-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--color-white);
+      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+      transition: var(--transition-smooth);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+    
+    .company-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+    }
+    
+    .company-card img {
+      transition: transform 0.6s ease;
+    }
+    
+    .company-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Video Cards */
+    .video-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1);
+    }
+    
+    .video-card video {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .video-card:hover video {
+      transform: scale(1.05);
+    }
+    
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.2);
+      transition: background 0.3s ease;
+    }
+    
+    .video-card:hover .play-overlay {
+      background: rgba(15, 23, 42, 0.35);
+    }
+    
+    .play-button {
+      width: 72px;
+      height: 72px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .video-card:hover .play-button {
+      transform: scale(1.1);
+    }
+    
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-content {
+      background: var(--color-white);
+      border-radius: 24px;
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.3);
+    }
+    
+    .modal-overlay.open .modal-content {
+      transform: scale(1);
+    }
+    
+    .video-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.95);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .video-modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Timeline */
+    .timeline-item {
+      position: relative;
+      padding-left: 40px;
+      padding-bottom: 48px;
+      border-left: 2px solid rgba(212, 160, 23, 0.3);
+    }
+    
+    .timeline-item:last-child {
+      border-left: 2px solid transparent;
+      padding-bottom: 0;
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      box-shadow: 0 0 0 6px rgba(212, 160, 23, 0.15);
+    }
+    
+    /* Location Cards */
+    .location-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--color-white);
+      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+      transition: var(--transition-smooth);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+    
+    .location-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+    }
+    
+    /* Form Styles */
+    .form-input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      border-radius: 12px;
+      font-size: 16px;
+      transition: var(--transition-smooth);
+      background: var(--color-white);
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 4px rgba(212, 160, 23, 0.1);
+    }
+    
+    .form-input.error {
+      border-color: #EF4444;
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--color-navy);
+    }
+    
+    .progress-step {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      background: rgba(15, 23, 42, 0.08);
+      color: var(--color-gray);
+      transition: var(--transition-smooth);
+    }
+    
+    .progress-step.active {
+      background: var(--color-gold);
+      color: var(--color-white);
+    }
+    
+    .progress-step.completed {
+      background: var(--color-navy);
+      color: var(--color-white);
+    }
+    
+    .progress-line {
+      flex: 1;
+      height: 2px;
+      background: rgba(15, 23, 42, 0.08);
+      margin: 0 12px;
+      transition: var(--transition-smooth);
+    }
+    
+    .progress-line.completed {
+      background: var(--color-gold);
+    }
+    
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 52px;
+      height: 52px;
+      background: var(--color-navy);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 900;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition-smooth);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      background: var(--color-gold);
+      transform: translateY(-4px);
+    }
+    
+    /* Counter Animation */
+    .counter {
+      font-variant-numeric: tabular-nums;
+    }
+    
+    /* Parallax Background */
+    .parallax-bg {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    @media (max-width: 768px) {
+      .parallax-bg {
+        background-attachment: scroll;
+      }
+    }
+    
+    /* Footer */
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: var(--color-gold);
+    }
+    
+    /* Success Animation */
+    .success-checkmark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(34, 197, 94, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      animation: scaleIn 0.5s ease;
+    }
+    
+    @keyframes scaleIn {
+      0% { transform: scale(0); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--color-gold);
+      color: var(--color-white);
+      padding: 8px 16px;
+      z-index: 10001;
+      transition: top 0.3s ease;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    /* Focus visible */
+    *:focus-visible {
+      outline: 2px solid var(--color-gold);
+      outline-offset: 2px;
+    }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Loading Screen -->
+  <div class="loader-overlay" id="loader" role="status" aria-label="Loading">
+    <div class="flex flex-col items-center gap-6">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" stroke="#D4A017" stroke-width="2" stroke-dasharray="120" stroke-dashoffset="120" class="animate-spin" style="transform-origin: center;"/>
+        <path d="M32 16L36 28H48L38 36L42 48L32 40L22 48L26 36L16 28H28L32 16Z" fill="#0F172A"/>
+      </svg>
+      <div class="loader-ring"></div>
+      <p class="text-navy font-medium">Loading UniverseGroups</p>
+    </div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Scroll progress"></div>
+  
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container mx-auto px-6 h-full flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3" aria-label="UniverseGroups Home">
+        <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" stroke="#D4A017" stroke-width="2"/>
+          <circle cx="32" cy="32" r="20" stroke="#0F172A" stroke-width="2"/>
+          <path d="M32 8L35 26H53L39 37L44 55L32 44L20 55L25 37L11 26H29L32 8Z" fill="#D4A017"/>
+          <circle cx="32" cy="32" r="6" fill="#0F172A"/>
+        </svg>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl font-bold text-navy leading-none">UniverseGroups</span>
+          <span class="text-xs text-elegant-gray tracking-widest uppercase">Law Of Attraction</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-10" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#companies" class="nav-link">Companies</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#locations" class="nav-link">Locations</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <!-- Header Actions -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="#companies" class="btn-primary">
+          Explore Companies
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn-secondary">Contact Us</a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="lg:hidden p-2 text-navy" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile menu" aria-modal="true">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-10">
+        <a href="#" class="flex items-center gap-3" aria-label="UniverseGroups Home">
+          <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" stroke="#D4A017" stroke-width="2"/>
+            <path d="M32 16L35 28H47L37 36L41 48L32 40L23 48L27 36L17 28H29L32 16Z" fill="#0F172A"/>
+          </svg>
+          <span class="font-serif text-lg font-bold text-navy">UniverseGroups</span>
+        </a>
+        <button class="p-2 text-navy" id="menuClose" aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6" aria-label="Mobile navigation">
+        <a href="#home" class="text-2xl font-serif font-semibold text-navy hover:text-premium-gold transition-colors mobile-nav-link">Home</a>
+        <a href="#companies" class="text-2xl font-serif font-semibold text-navy hover:text-premium-gold transition-colors mobile-nav-link">Companies</a>
+        <a href="#services" class="text-2xl font-serif font-semibold text-navy hover:text-premium-gold transition-colors mobile-nav-link">Services</a>
+        <a href="#about" class="text-2xl font-serif font-semibold text-navy hover:text-premium-gold transition-colors mobile-nav-link">About</a>
+        <a href="#locations" class="text-2xl font-serif font-semibold text-navy hover:text-premium-gold transition-colors mobile-nav-link">Locations</a>
+        <a href="#contact" class="text-2xl font-serif font-semibold text-navy hover:text-premium-gold transition-colors mobile-nav-link">Contact</a>
+      </nav>
+      
+      <div class="mt-10 flex flex-col gap-4">
+        <a href="#companies" class="btn-primary justify-center mobile-nav-link">Explore Companies</a>
+        <a href="#contact" class="btn-secondary justify-center mobile-nav-link">Contact Us</a>
+      </div>
+      
+      <div class="mt-10 pt-8 border-t border-gray-100">
+        <p class="text-elegant-gray text-sm mb-4">Connect with us</p>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-navy/5 flex items-center justify-center text-navy hover:bg-premium-gold hover:text-white transition-all" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-navy/5 flex items-center justify-center text-navy hover:bg-premium-gold hover:text-white transition-all" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-navy/5 flex items-center justify-center text-navy hover:bg-premium-gold hover:text-white transition-all" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section bg-white">
+      <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+      
+      <div class="container mx-auto px-6 hero-content">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="reveal">
+              <span class="inline-block px-4 py-2 rounded-full bg-premium-gold/10 text-premium-gold text-sm font-semibold tracking-wide uppercase mb-6">
+                Global Enterprise Network
+              </span>
+            </div>
+            <h1 class="reveal reveal-delay-1 text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-navy leading-tight mb-6">
+              Opportunity <br/>
+              <span class="text-premium-gold">Starts Here.</span>
+            </h1>
+            <p class="reveal reveal-delay-2 text-lg md:text-xl text-elegant-gray leading-relaxed mb-10 max-w-xl">
+              We are the global leader in workforce and business solutions. Our network of specialized companies is unified in a common purpose: creating opportunities for people and companies to grow and thrive.
+            </p>
+            <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
+              <button class="btn-primary" id="watchVideoBtn" aria-label="Watch our story video">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                Watch Video
+              </button>
+              <a href="#about" class="btn-secondary">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+            
+            <div class="reveal reveal-delay-4 mt-12 grid grid-cols-3 gap-6 max-w-md">
+              <div>
+                <p class="text-3xl font-bold text-navy counter" data-target="8">0</p>
+                <p class="text-sm text-elegant-gray">Companies</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-navy counter" data-target="250">0</p>
+                <p class="text-sm text-elegant-gray">Experts</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-navy counter" data-target="15">0</p>
+                <p class="text-sm text-elegant-gray">Countries</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="order-1 lg:order-2 hero-illustration">
+            <div class="relative" id="heroIllustration">
+              <div class="absolute -inset-8 bg-gradient-to-br from-premium-gold/10 to-transparent rounded-full blur-3xl" aria-hidden="true"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" 
+                alt="Modern premium corporate building representing UniverseGroups enterprise ecosystem" 
+                class="relative rounded-3xl shadow-2xl w-full object-cover h-[400px] lg:h-[560px]"
+                loading="eager"
+              >
+              
+              <!-- Floating Cards -->
+              <div class="absolute -left-6 top-1/4 glass-card p-4 hidden md:block" aria-hidden="true">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-premium-gold/20 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m22 21-3-3"/><path d="m19 18 3 3"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-navy text-sm">Workforce</p>
+                    <p class="text-xs text-elegant-gray">Solutions</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="absolute -right-4 bottom-1/4 glass-card p-4 hidden md:block" aria-hidden="true">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-navy/10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-navy text-sm">Growth</p>
+                    <p class="text-xs text-elegant-gray">Focused</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" aria-hidden="true"></div>
+    </section>
+    
+    <!-- Video Section -->
+    <section id="video-section" class="py-24 bg-soft-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-premium-gold font-semibold tracking-wide uppercase text-sm">Our Ecosystem</span>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy mt-4 mb-6">Different Niches. Same Differentiators.</h2>
+          <p class="text-lg text-elegant-gray">Our companies span industries and markets with one common mission: exceptional service and meaningful growth.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="video-card reveal reveal-delay-1" role="button" tabindex="0" aria-label="Play hospitality video" data-video="hospitality">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" loading="lazy">
+              <source src="https://player.vimeo.com/external/371835686.sd.mp4?s=e90dc73fc511c6b16d1378860028580767b4e5d9&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="play-overlay">
+              <div class="play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0F172A"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-navy/90 to-transparent">
+              <h3 class="text-white font-serif text-xl font-semibold">Hospitality Excellence</h3>
+              <p class="text-white/80 text-sm">Cafe, dining, and culinary experiences</p>
+            </div>
+          </div>
+          
+          <div class="video-card reveal reveal-delay-2" role="button" tabindex="0" aria-label="Play lifestyle video" data-video="lifestyle">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" loading="lazy">
+              <source src="https://player.vimeo.com/external/399004529.sd.mp4?s=1f060310a3282c03959147437725029d72816f17&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="play-overlay">
+              <div class="play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0F172A"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-navy/90 to-transparent">
+              <h3 class="text-white font-serif text-xl font-semibold">Lifestyle & Beauty</h3>
+              <p class="text-white/80 text-sm">Beauty, wellness, and personal care</p>
+            </div>
+          </div>
+          
+          <div class="video-card reveal reveal-delay-3 md:col-span-2 lg:col-span-1" role="button" tabindex="0" aria-label="Play corporate video" data-video="corporate">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" loading="lazy">
+              <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38af1e1860a6d746c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="play-overlay">
+              <div class="play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0F172A"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-navy/90 to-transparent">
+              <h3 class="text-white font-serif text-xl font-semibold">Business Solutions</h3>
+              <p class="text-white/80 text-sm">Enterprise consulting and real estate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Companies Section -->
+    <section id="companies" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-premium-gold font-semibold tracking-wide uppercase text-sm">Our Portfolio</span>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy mt-4 mb-6">Companies That Define Excellence</h2>
+          <p class="text-lg text-elegant-gray">Eight specialized brands, one unified commitment to quality, service, and growth.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="companiesGrid">
+          <!-- Companies injected via JavaScript -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- Why UniverseGroups Section -->
+    <section id="about" class="py-24 bg-soft-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="text-premium-gold font-semibold tracking-wide uppercase text-sm">Why UniverseGroups</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy mt-4 mb-6">Built on Trust, Driven by Excellence</h2>
+            <p class="text-lg text-elegant-gray mb-8 leading-relaxed">
+              UniverseGroups brings together a portfolio of market-leading companies, each dedicated to transforming its industry through innovation, expertise, and an unwavering focus on customer success.
+            </p>
+            <a href="#contact" class="btn-primary">Partner With Us</a>
+          </div>
+          
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="glass-card p-6 reveal reveal-delay-1">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-2">Professional Team</h3>
+              <p class="text-elegant-gray text-sm">Industry veterans and innovators united by excellence.</p>
+            </div>
+            
+            <div class="glass-card p-6 reveal reveal-delay-2">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-2">Trusted Network</h3>
+              <p class="text-elegant-gray text-sm">A reliable ecosystem of partners and clients worldwide.</p>
+            </div>
+            
+            <div class="glass-card p-6 reveal reveal-delay-3">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-2">Quality Experience</h3>
+              <p class="text-elegant-gray text-sm">Premium service delivery across every touchpoint.</p>
+            </div>
+            
+            <div class="glass-card p-6 reveal reveal-delay-4">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-2">Technology Driven</h3>
+              <p class="text-elegant-gray text-sm">Modern digital tools powering seamless operations.</p>
+            </div>
+            
+            <div class="glass-card p-6 reveal reveal-delay-1">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-2">Customer Support</h3>
+              <p class="text-elegant-gray text-sm">Dedicated assistance whenever you need it.</p>
+            </div>
+            
+            <div class="glass-card p-6 reveal reveal-delay-2">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-2">Growth Focus</h3>
+              <p class="text-elegant-gray text-sm">Strategies designed for sustainable expansion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Parallax Timeline Section -->
+    <section id="services" class="parallax-bg py-32 relative" style="background-image: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80');">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-premium-gold font-semibold tracking-wide uppercase text-sm">Our Journey</span>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mt-4 mb-6">Milestones That Shaped Us</h2>
+          <p class="text-lg text-white/70">From a single vision to a global network of specialized companies.</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card p-6 md:p-8 bg-white/10 border-white/10">
+              <span class="text-premium-gold font-semibold text-sm">2010</span>
+              <h3 class="text-2xl font-serif font-semibold text-white mt-2 mb-3">Foundation</h3>
+              <p class="text-white/70">UniverseGroups was founded with a vision to create opportunities across industries and markets.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card p-6 md:p-8 bg-white/10 border-white/10">
+              <span class="text-premium-gold font-semibold text-sm">2014</span>
+              <h3 class="text-2xl font-serif font-semibold text-white mt-2 mb-3">Portfolio Expansion</h3>
+              <p class="text-white/70">Launched hospitality and lifestyle brands including Seash Cafe, Shosh, and Skash.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card p-6 md:p-8 bg-white/10 border-white/10">
+              <span class="text-premium-gold font-semibold text-sm">2018</span>
+              <h3 class="text-2xl font-serif font-semibold text-white mt-2 mb-3">Enterprise Diversification</h3>
+              <p class="text-white/70">Expanded into real estate, events, business solutions, and consulting services.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card p-6 md:p-8 bg-white/10 border-white/10">
+              <span class="text-premium-gold font-semibold text-sm">2024</span>
+              <h3 class="text-2xl font-serif font-semibold text-white mt-2 mb-3">Global Presence</h3>
+              <p class="text-white/70">Operating across 15 countries with a team of over 250 professionals.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-4xl mx-auto">
+          <div class="text-center reveal reveal-delay-1">
+            <p class="text-4xl md:text-5xl font-bold text-premium-gold counter" data-target="8">0</p>
+            <p class="text-white/70 mt-2">Companies</p>
+          </div>
+          <div class="text-center reveal reveal-delay-2">
+            <p class="text-4xl md:text-5xl font-bold text-premium-gold counter" data-target="250">0</p>
+            <p class="text-white/70 mt-2">Team Members</p>
+          </div>
+          <div class="text-center reveal reveal-delay-3">
+            <p class="text-4xl md:text-5xl font-bold text-premium-gold counter" data-target="15">0</p>
+            <p class="text-white/70 mt-2">Countries</p>
+          </div>
+          <div class="text-center reveal reveal-delay-4">
+            <p class="text-4xl md:text-5xl font-bold text-premium-gold counter" data-target="98">0</p>
+            <p class="text-white/70 mt-2">% Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Locations Section -->
+    <section id="locations" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-premium-gold font-semibold tracking-wide uppercase text-sm">Tamil Nadu Presence</span>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy mt-4 mb-6">Our Locations in Tamil Nadu</h2>
+          <p class="text-lg text-elegant-gray">Find a UniverseGroups branch across Tamil Nadu and connect with our local teams.</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2 reveal">
+            <div class="relative rounded-3xl overflow-hidden shadow-xl h-[400px] lg:h-full min-h-[400px]">
+              <img 
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&q=80" 
+                alt="Map showing UniverseGroups branch locations across Tamil Nadu, India" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-navy/20"></div>
+              
+              <!-- Tamil Nadu Map Pins -->
+              <button class="absolute top-[49%] left-[73%] group" aria-label="Chennai branch">
+                <div class="w-4 h-4 bg-premium-gold rounded-full animate-ping absolute"></div>
+                <div class="w-4 h-4 bg-premium-gold rounded-full relative border-2 border-white"></div>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <p class="text-xs font-semibold text-navy">Chennai, HQ</p>
+                </div>
+              </button>
+              
+              <button class="absolute top-[53%] left-[69.5%] group" aria-label="Coimbatore branch">
+                <div class="w-4 h-4 bg-premium-gold rounded-full animate-ping absolute"></div>
+                <div class="w-4 h-4 bg-premium-gold rounded-full relative border-2 border-white"></div>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <p class="text-xs font-semibold text-navy">Coimbatore</p>
+                </div>
+              </button>
+              
+              <button class="absolute top-[56%] left-[71%] group" aria-label="Madurai branch">
+                <div class="w-4 h-4 bg-premium-gold rounded-full animate-ping absolute"></div>
+                <div class="w-4 h-4 bg-premium-gold rounded-full relative border-2 border-white"></div>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <p class="text-xs font-semibold text-navy">Madurai</p>
+                </div>
+              </button>
+              
+              <button class="absolute top-[54%] left-[71.5%] group" aria-label="Trichy branch">
+                <div class="w-4 h-4 bg-premium-gold rounded-full animate-ping absolute"></div>
+                <div class="w-4 h-4 bg-premium-gold rounded-full relative border-2 border-white"></div>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <p class="text-xs font-semibold text-navy">Trichy</p>
+                </div>
+              </button>
+              
+              <button class="absolute top-[52%] left-[70.5%] group" aria-label="Salem branch">
+                <div class="w-4 h-4 bg-premium-gold rounded-full animate-ping absolute"></div>
+                <div class="w-4 h-4 bg-premium-gold rounded-full relative border-2 border-white"></div>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <p class="text-xs font-semibold text-navy">Salem</p>
+                </div>
+              </button>
+            </div>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="location-card p-6 reveal reveal-delay-1">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-serif font-semibold text-navy">Chennai, Tamil Nadu</h3>
+                  <p class="text-elegant-gray text-sm mt-1">Express Avenue Mall, Whites Road<br/>Royapettah, Chennai 600014</p>
+                  <p class="text-navy text-sm mt-2 font-medium">+91 44 1234 5678</p>
+                  <a href="#" class="text-premium-gold text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">Get Directions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="location-card p-6 reveal reveal-delay-2">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-serif font-semibold text-navy">Coimbatore, Tamil Nadu</h3>
+                  <p class="text-elegant-gray text-sm mt-1">Brookefields Mall, Brooke Bond Road<br/>Coimbatore 641001</p>
+                  <p class="text-navy text-sm mt-2 font-medium">+91 422 8765 4321</p>
+                  <a href="#" class="text-premium-gold text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">Get Directions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="location-card p-6 reveal reveal-delay-3">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-serif font-semibold text-navy">Madurai, Tamil Nadu</h3>
+                  <p class="text-elegant-gray text-sm mt-1">Milan Em Mall, K.K. Nagar<br/>Madurai 625020</p>
+                  <p class="text-navy text-sm mt-2 font-medium">+91 452 2345 6789</p>
+                  <a href="#" class="text-premium-gold text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">Get Directions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="location-card p-6 reveal reveal-delay-1">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-serif font-semibold text-navy">Trichy, Tamil Nadu</h3>
+                  <p class="text-elegant-gray text-sm mt-1">BHEL Township, Thiruverumbur<br/>Trichy 620013</p>
+                  <p class="text-navy text-sm mt-2 font-medium">+91 431 3456 7890</p>
+                  <a href="#" class="text-premium-gold text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">Get Directions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="location-card p-6 reveal reveal-delay-2">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-serif font-semibold text-navy">Salem, Tamil Nadu</h3>
+                  <p class="text-elegant-gray text-sm mt-1">Five Roads, Near Bus Stand<br/>Salem 636007</p>
+                  <p class="text-navy text-sm mt-2 font-medium">+91 427 4567 8901</p>
+                  <a href="#" class="text-premium-gold text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">Get Directions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Enquiry Section -->
+    <section id="contact" class="py-24 bg-soft-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div class="reveal">
+            <span class="text-premium-gold font-semibold tracking-wide uppercase text-sm">Get In Touch</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy mt-4 mb-6">Start a Conversation</h2>
+            <p class="text-lg text-elegant-gray mb-8 leading-relaxed">
+              Whether you are looking for business solutions, partnership opportunities, or service inquiries, our team is ready to help.
+            </p>
+            
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-navy">Phone</p>
+                  <p class="text-elegant-gray">+91 44 1234 5678</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-navy">Email</p>
+                  <p class="text-elegant-gray">hello@universegroups.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-navy">Headquarters</p>
+                  <p class="text-elegant-gray">UniverseGroups Tower, Chennai, Tamil Nadu</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-card p-8 md:p-10 reveal reveal-delay-2">
+            <form id="enquiryForm" novalidate>
+              <!-- Progress Indicator -->
+              <div class="flex items-center justify-between mb-10">
+                <div class="progress-step active" data-step="1">1</div>
+                <div class="progress-line" data-line="1"></div>
+                <div class="progress-step" data-step="2">2</div>
+                <div class="progress-line" data-line="2"></div>
+                <div class="progress-step" data-step="3">3</div>
+              </div>
+              
+              <!-- Step 1 -->
+              <div class="form-step active" data-step="1">
+                <h3 class="text-2xl font-serif font-semibold text-navy mb-6">Personal Information</h3>
+                <div class="space-y-5">
+                  <div>
+                    <label for="name" class="form-label">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="John Anderson" required aria-required="true">
+                    <p class="error-message text-red-500 text-sm mt-1 hidden">Please enter your full name.</p>
+                  </div>
+                  <div>
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210" required aria-required="true">
+                    <p class="error-message text-red-500 text-sm mt-1 hidden">Please enter a valid phone number.</p>
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                  <button type="button" class="btn-primary next-step" data-next="2">Continue <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+                </div>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="form-step hidden" data-step="2">
+                <h3 class="text-2xl font-serif font-semibold text-navy mb-6">Contact Details</h3>
+                <div class="space-y-5">
+                  <div>
+                    <label for="email" class="form-label">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required aria-required="true">
+                    <p class="error-message text-red-500 text-sm mt-1 hidden">Please enter a valid email address.</p>
+                  </div>
+                  <div>
+                    <label for="company" class="form-label">Company Name</label>
+                    <input type="text" id="company" name="company" class="form-input" placeholder="Your company name">
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-between">
+                  <button type="button" class="btn-secondary prev-step" data-prev="1">Back</button>
+                  <button type="button" class="btn-primary next-step" data-next="3">Continue <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+                </div>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="form-step hidden" data-step="3">
+                <h3 class="text-2xl font-serif font-semibold text-navy mb-6">Service Inquiry</h3>
+                <div class="space-y-5">
+                  <div>
+                    <label for="service" class="form-label">Service of Interest *</label>
+                    <select id="service" name="service" class="form-input" required aria-required="true">
+                      <option value="">Select a service</option>
+                      <option value="hospitality">Hospitality & Food</option>
+                      <option value="beauty">Beauty & Wellness</option>
+                      <option value="interior">Interior Design</option>
+                      <option value="business">Business Solutions</option>
+                      <option value="events">Event Management</option>
+                      <option value="realestate">Real Estate</option>
+                      <option value="consulting">Consulting</option>
+                    </select>
+                    <p class="error-message text-red-500 text-sm mt-1 hidden">Please select a service.</p>
+                  </div>
+                  <div>
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" rows="4" class="form-input resize-none" placeholder="Tell us about your requirements..."></textarea>
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-between">
+                  <button type="button" class="btn-secondary prev-step" data-prev="2">Back</button>
+                  <button type="submit" class="btn-primary">Submit Inquiry <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+                </div>
+              </div>
+              
+              <!-- Success Message -->
+              <div class="form-step hidden text-center" data-step="success">
+                <div class="success-checkmark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 class="text-2xl font-serif font-semibold text-navy mb-3">Thank You!</h3>
+                <p class="text-elegant-gray mb-6">Your inquiry has been received. Our team will contact you within 24 hours.</p>
+                <button type="button" class="btn-secondary" id="resetForm">Submit Another Inquiry</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Privacy Section -->
+    <section id="privacy" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16 reveal">
+            <span class="text-premium-gold font-semibold tracking-wide uppercase text-sm">Transparency</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy mt-4 mb-6">Privacy & Data Protection</h2>
+            <p class="text-lg text-elegant-gray">Your privacy matters. Learn how we protect and use your information.</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 reveal reveal-delay-1">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-3">Cookies Policy</h3>
+              <p class="text-elegant-gray text-sm leading-relaxed">We use essential cookies to ensure website functionality and analytical cookies to improve your experience. You can manage your preferences anytime.</p>
+            </div>
+            
+            <div class="glass-card p-8 reveal reveal-delay-2">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-3">Data Usage</h3>
+              <p class="text-elegant-gray text-sm leading-relaxed">Your data is used solely to provide services, respond to inquiries, and improve our offerings. We never sell your personal information to third parties.</p>
+            </div>
+            
+            <div class="glass-card p-8 reveal reveal-delay-3">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-3">Terms of Service</h3>
+              <p class="text-elegant-gray text-sm leading-relaxed">By using our website and services, you agree to our terms. We reserve the right to update these terms to reflect evolving business practices.</p>
+            </div>
+            
+            <div class="glass-card p-8 reveal reveal-delay-4">
+              <div class="w-12 h-12 rounded-xl bg-premium-gold/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-navy mb-3">Contact Our DPO</h3>
+              <p class="text-elegant-gray text-sm leading-relaxed">For privacy-related questions, contact our Data Protection Officer at privacy@universegroups.com or call +91 44 1234 5678.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-navy text-white py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Brand Column -->
+        <div>
+          <a href="#" class="flex items-center gap-3 mb-6" aria-label="UniverseGroups Home">
+            <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="32" cy="32" r="30" stroke="#D4A017" stroke-width="2"/>
+              <circle cx="32" cy="32" r="20" stroke="#FFFFFF" stroke-width="2"/>
+              <path d="M32 8L35 26H53L39 37L44 55L32 44L20 55L25 37L11 26H29L32 8Z" fill="#D4A017"/>
+              <circle cx="32" cy="32" r="6" fill="#0F172A"/>
+            </svg>
+            <span class="font-serif text-xl font-bold">UniverseGroups</span>
+          </a>
+          <p class="text-white/70 text-sm leading-relaxed mb-6">
+            A global enterprise network creating opportunities across hospitality, lifestyle, real estate, and business solutions.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-premium-gold transition-colors" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-premium-gold transition-colors" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-premium-gold transition-colors" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-serif text-lg font-semibold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="footer-link text-sm">Home</a></li>
+            <li><a href="#companies" class="footer-link text-sm">Companies</a></li>
+            <li><a href="#services" class="footer-link text-sm">Services</a></li>
+            <li><a href="#about" class="footer-link text-sm">About Us</a></li>
+            <li><a href="#locations" class="footer-link text-sm">Locations</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h4 class="font-serif text-lg font-semibold mb-6">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="footer-link text-sm">Hospitality</a></li>
+            <li><a href="#" class="footer-link text-sm">Beauty & Wellness</a></li>
+            <li><a href="#" class="footer-link text-sm">Interior Design</a></li>
+            <li><a href="#" class="footer-link text-sm">Event Management</a></li>
+            <li><a href="#" class="footer-link text-sm">Real Estate</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div>
+          <h4 class="font-serif text-lg font-semibold mb-6">Newsletter</h4>
+          <p class="text-white/70 text-sm mb-4">Subscribe for updates on our companies and services.</p>
+          <form id="newsletterForm" class="flex flex-col gap-3">
+            <input type="email" id="newsletterEmail" class="px-4 py-3 rounded-lg bg-white/10 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-premium-gold" placeholder="Your email address" required>
+            <button type="submit" class="btn-primary justify-center">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/60 text-sm">Copyright &copy; <span id="currentYear"></span> UniverseGroups. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#privacy" class="footer-link text-sm">Privacy Policy</a>
+          <a href="#" class="footer-link text-sm">Terms of Service</a>
+          <a href="#" class="footer-link text-sm">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+  
+  <!-- Company Modal -->
+  <div class="modal-overlay" id="companyModal" role="dialog" aria-modal="true" aria-label="Company details">
+    <div class="modal-content">
+      <div class="relative">
+        <img id="modalImage" src="" alt="" class="w-full h-64 md:h-80 object-cover">
+        <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-navy hover:bg-premium-gold hover:text-white transition-colors" id="closeModal" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="p-8">
+        <div class="flex items-center gap-4 mb-4">
+          <div id="modalLogo"></div>
+          <div>
+            <h3 id="modalTitle" class="text-3xl font-serif font-bold text-navy"></h3>
+            <p id="modalCategory" class="text-premium-gold font-medium"></p>
+          </div>
+        </div>
+        <p id="modalDescription" class="text-elegant-gray mb-8 leading-relaxed"></p>
+        
+        <div id="modalDetails" class="grid sm:grid-cols-2 gap-4 mb-8"></div>
+        
+        <div class="flex flex-wrap gap-4">
+          <button class="btn-primary" id="modalInquiry">Send Inquiry</button>
+          <button class="btn-secondary" id="modalContact">Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Video Modal -->
+  <div class="video-modal-overlay" id="videoModal" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="w-full max-w-6xl mx-auto px-4">
+      <div class="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
+        <video id="modalVideo" class="w-full h-full" controls></video>
+        <button class="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 backdrop-blur flex items-center justify-center text-white hover:bg-premium-gold transition-colors" id="closeVideoModal" aria-label="Close video">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript -->
+  <script>
+    // ============================================
+    // UniverseGroups Website - Main JavaScript
+    // ============================================
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      // ============================================
+      // Company Data
+      // ============================================
+      const companies = [
+        {
+          id: 'seash-cafe',
+          name: 'Seash Cafe',
+          category: 'Cafe & Food Experience',
+          description: 'A premium cafe experience offering artisanal coffee, gourmet pastries, and a refined coastal-inspired atmosphere for modern professionals and families.',
+          image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80',
+          details: [
+            { label: 'Hours', value: '7:00 AM - 10:00 PM' },
+            { label: 'Phone', value: '+1 (555) 010-101' },
+            { label: 'Email', value: 'hello@seashcafe.com' },
+            { label: 'Book Table', value: 'Available Online' }
+          ],
+          popupSections: ['Gallery', 'Hours', 'Phone', 'Email', 'Book Table']
+        },
+        {
+          id: 'shosh',
+          name: 'Shosh',
+          category: 'Pure Veg Restaurant & Sweets',
+          description: 'An elegant vegetarian restaurant and sweet house celebrating authentic flavors, fresh ingredients, and time-honored recipes crafted with care.',
+          image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80',
+          details: [
+            { label: 'Menu', value: 'Vegetarian Fine Dining' },
+            { label: 'Reservation', value: 'Recommended' },
+            { label: 'Gallery', value: 'View Dishes' },
+            { label: 'Contact', value: '+1 (555) 010-102' }
+          ],
+          popupSections: ['Menu', 'Reservation', 'Gallery', 'Contact']
+        },
+        {
+          id: 'skash',
+          name: 'Skash',
+          category: 'Unisex Beauty Parlor',
+          description: 'A luxury unisex beauty destination delivering world-class hair, skin, and wellness services in a serene and sophisticated environment.',
+          image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80',
+          details: [
+            { label: 'Appointments', value: 'By Booking' },
+            { label: 'Services', value: 'Hair, Skin, Nails' },
+            { label: 'Pricing', value: 'Premium Packages' },
+            { label: 'Phone', value: '+1 (555) 010-103' }
+          ],
+          popupSections: ['Appointments', 'Services', 'Pricing']
+        },
+        {
+          id: 'skash-interior',
+          name: 'Skash Interior',
+          category: 'Decoration & Home Decors',
+          description: 'Transforming spaces into timeless expressions of style through bespoke interior design, curated decor, and end-to-end project execution.',
+          image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80',
+          details: [
+            { label: 'Projects', value: 'Residential & Commercial' },
+            { label: 'Consultation', value: 'Free First Visit' },
+            { label: 'Estimate', value: 'Custom Quotes' },
+            { label: 'Phone', value: '+1 (555) 010-104' }
+          ],
+          popupSections: ['Projects', 'Consultation', 'Estimate']
+        },
+        {
+          id: 'stash',
+          name: 'Stash',
+          category: 'Business Readymade Solutions',
+          description: 'Empowering enterprises with scalable, ready-to-deploy business solutions that streamline operations and accelerate digital transformation.',
+          image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+          details: [
+            { label: 'Consulting', value: 'Strategy & Ops' },
+            { label: 'Services', value: 'ERP, CRM, Cloud' },
+            { label: 'Pricing', value: 'Enterprise Plans' },
+            { label: 'Phone', value: '+1 (555) 010-105' }
+          ],
+          popupSections: ['Consulting', 'Services', 'Pricing']
+        },
+        {
+          id: 'skash-events',
+          name: 'Skash Events',
+          category: 'Marriage Event Services',
+          description: 'Creating unforgettable wedding experiences through meticulous planning, creative design, and flawless execution for your most cherished celebrations.',
+          image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+          details: [
+            { label: 'Packages', value: 'Customizable' },
+            { label: 'Gallery', value: 'Past Weddings' },
+            { label: 'Booking', value: '12 Months Ahead' },
+            { label: 'Phone', value: '+1 (555) 010-106' }
+          ],
+          popupSections: ['Packages', 'Gallery', 'Booking']
+        },
+        {
+          id: 'skash-real-estate',
+          name: 'Skash Real Estate',
+          category: 'Property Business',
+          description: 'A trusted real estate partner offering premium residential, commercial, and investment properties with expert guidance at every step.',
+          image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+          details: [
+            { label: 'Properties', value: 'Buy, Sell, Rent' },
+            { label: 'Virtual Tour', value: 'Available' },
+            { label: 'Contact', value: '+1 (555) 010-107' },
+            { label: 'Locations', value: 'Global Portfolio' }
+          ],
+          popupSections: ['Properties', 'Virtual Tour', 'Contact']
+        },
+        {
+          id: 'skegh',
+          name: 'Skegh',
+          category: 'Voucher Consultant',
+          description: 'Strategic voucher and incentive consulting that helps businesses drive loyalty, engagement, and measurable growth through tailored reward programs.',
+          image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80',
+          details: [
+            { label: 'Consultation', value: 'Business Rewards' },
+            { label: 'Pricing', value: 'Performance Based' },
+            { label: 'Contact', value: '+1 (555) 010-108' },
+            { label: 'Clients', value: 'Fortune 500' }
+          ],
+          popupSections: ['Consultation', 'Pricing', 'Contact']
+        }
+      ];
+      
+      // ============================================
+      // Loader
+      // ============================================
+      const loader = document.getElementById('loader');
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          loader.classList.add('hidden');
+        }, 600);
+      });
+      
+      // ============================================
+      // Scroll Progress Bar
+      // ============================================
+      const scrollProgress = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / docHeight) * 100;
+        scrollProgress.style.width = progress + '%';
+      }, { passive: true });
+      
+      // ============================================
+      // Sticky Header & Shrink on Scroll
+      // ============================================
+      const header = document.getElementById('header');
+      let lastScroll = 0;
+      
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        
+        if (currentScroll > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+      }, { passive: true });
+      
+      // ============================================
+      // Mobile Drawer
+      // ============================================
+      const menuToggle = document.getElementById('menuToggle');
+      const menuClose = document.getElementById('menuClose');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const drawerOverlay = document.getElementById('drawerOverlay');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      
+      function openDrawer() {
+        mobileDrawer.classList.add('open');
+        drawerOverlay.classList.add('open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeDrawer() {
+        mobileDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      
+      menuToggle.addEventListener('click', openDrawer);
+      menuClose.addEventListener('click', closeDrawer);
+      drawerOverlay.addEventListener('click', closeDrawer);
+      
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
+      
+      // Escape key to close drawer
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeDrawer();
+          closeCompanyModal();
+          closeVideoModal();
+        }
+      });
+      
+      // ============================================
+      // Hero Particles
+      // ============================================
+      const particlesContainer = document.getElementById('heroParticles');
+      const particleCount = window.matchMedia('(pointer: coarse)').matches ? 12 : 20;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const size = Math.random() * 12 + 4;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 8 + 's';
+        particle.style.animationDuration = (Math.random() * 6 + 6) + 's';
+        particlesContainer.appendChild(particle);
+      }
+      
+      // ============================================
+      // Parallax Hero Illustration
+      // ============================================
+      const heroIllustration = document.getElementById('heroIllustration');
+      if (!window.matchMedia('(pointer: coarse)').matches) {
+        window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          if (scrolled < window.innerHeight) {
+            heroIllustration.style.transform = `translateY(${scrolled * 0.15}px)`;
+          }
+        }, { passive: true });
+      }
+      
+      // ============================================
+      // Intersection Observer - Reveal Animations
+      // ============================================
+      const revealElements = document.querySelectorAll('.reveal');
+      
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      
+      revealElements.forEach(el => revealObserver.observe(el));
+      
+      // ============================================
+      // Animated Counters
+      // ============================================
+      const counters = document.querySelectorAll('.counter');
+      
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const start = performance.now();
+            
+            function updateCounter(currentTime) {
+              const elapsed = currentTime - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const easeOut = 1 - Math.pow(1 - progress, 3);
+              const current = Math.floor(easeOut * target);
+              counter.textContent = current + (target === 98 ? '' : '+');
+              
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.textContent = target + (target === 98 ? '' : '+');
+              }
+            }
+            
+            requestAnimationFrame(updateCounter);
+            counterObserver.unobserve(counter);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      counters.forEach(counter => counterObserver.observe(counter));
+      
+      // ============================================
+      // Active Navigation Link
+      // ============================================
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      sections.forEach(section => navObserver.observe(section));
+      
+      // ============================================
+      // Render Companies Grid
+      // ============================================
+      const companiesGrid = document.getElementById('companiesGrid');
+      
+      companies.forEach((company, index) => {
+        const card = document.createElement('div');
+        card.className = `company-card reveal reveal-delay-${(index % 4) + 1}`;
+        card.innerHTML = `
+          <div class="relative overflow-hidden h-48">
+            <img src="${company.image}" alt="${company.name} - ${company.category}" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 shadow-lg flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" stroke="#D4A017" stroke-width="2"/>
+                <path d="M32 18L35 28H45L37 34L40 44L32 38L24 44L27 34L19 28H29L32 18Z" fill="#0F172A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-premium-gold text-xs font-semibold uppercase tracking-wide">${company.category}</span>
+            <h3 class="text-xl font-serif font-bold text-navy mt-2 mb-3">${company.name}</h3>
+            <p class="text-elegant-gray text-sm leading-relaxed mb-4 line-clamp-2" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${company.description}</p>
+            <button class="text-navy font-semibold text-sm inline-flex items-center gap-2 hover:text-premium-gold transition-colors company-learn-more" data-company="${company.id}">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        `;
+        companiesGrid.appendChild(card);
+        revealObserver.observe(card);
+      });
+      
+      // ============================================
+      // Company Modal System
+      // ============================================
+      const companyModal = document.getElementById('companyModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalLogo = document.getElementById('modalLogo');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalCategory = document.getElementById('modalCategory');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalDetails = document.getElementById('modalDetails');
+      const closeModalBtn = document.getElementById('closeModal');
+      const modalInquiry = document.getElementById('modalInquiry');
+      const modalContact = document.getElementById('modalContact');
+      
+      function openCompanyModal(companyId) {
+        const company = companies.find(c => c.id === companyId);
+        if (!company) return;
+        
+        modalImage.src = company.image;
+        modalImage.alt = company.name + ' interior';
+        modalLogo.innerHTML = `
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="28" stroke="#D4A017" stroke-width="2"/>
+            <path d="M32 18L35 28H45L37 34L40 44L32 38L24 44L27 34L19 28H29L32 18Z" fill="#0F172A"/>
+          </svg>
+        `;
+        modalTitle.textContent = company.name;
+        modalCategory.textContent = company.category;
+        modalDescription.textContent = company.description;
+        
+        modalDetails.innerHTML = company.details.map(detail => `
+          <div class="p-4 rounded-xl bg-soft-white border border-navy/5">
+            <p class="text-xs text-elegant-gray uppercase tracking-wide">${detail.label}</p>
+            <p class="font-semibold text-navy mt-1">${detail.value}</p>
+          </div>
+        `).join('');
+        
+        companyModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeCompanyModal() {
+        companyModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      
+      document.querySelectorAll('.company-learn-more').forEach(btn => {
+        btn.addEventListener('click', () => {
+          openCompanyModal(btn.getAttribute('data-company'));
+        });
+      });
+      
+      closeModalBtn.addEventListener('click', closeCompanyModal);
+      companyModal.addEventListener('click', (e) => {
+        if (e.target === companyModal) closeCompanyModal();
+      });
+      
+      modalInquiry.addEventListener('click', () => {
+        closeCompanyModal();
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      });
+      
+      modalContact.addEventListener('click', () => {
+        closeCompanyModal();
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      });
+      
+      // ============================================
+      // Video Modal System
+      // ============================================
+      const videoModal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      const closeVideoModalBtn = document.getElementById('closeVideoModal');
+      const watchVideoBtn = document.getElementById('watchVideoBtn');
+      
+      const videoSources = {
+        hospitality: 'https://player.vimeo.com/external/371835686.sd.mp4?s=e90dc73fc511c6b16d1378860028580767b4e5d9&profile_id=164&oauth2_token_id=57447761',
+        lifestyle: 'https://player.vimeo.com/external/399004529.sd.mp4?s=1f060310a3282c03959147437725029d72816f17&profile_id=164&oauth2_token_id=57447761',
+        corporate: 'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38af1e1860a6d746c&profile_id=164&oauth2_token_id=57447761'
+      };
+      
+      function openVideoModal(videoKey) {
+        const source = videoSources[videoKey] || videoSources.corporate;
+        modalVideo.innerHTML = `<source src="${source}" type="video/mp4">`;
+        modalVideo.load();
+        videoModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        modalVideo.play().catch(() => {});
+      }
+      
+      function closeVideoModal() {
+        videoModal.classList.remove('open');
+        document.body.style.overflow = '';
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+      }
+      
+      document.querySelectorAll('.video-card').forEach(card => {
+        card.addEventListener('click', () => {
+          openVideoModal(card.getAttribute('data-video'));
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openVideoModal(card.getAttribute('data-video'));
+          }
+        });
+      });
+      
+      watchVideoBtn.addEventListener('click', () => {
+        openVideoModal('corporate');
+      });
+      
+      closeVideoModalBtn.addEventListener('click', closeVideoModal);
+      videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) closeVideoModal();
+      });
+      
+      // ============================================
+      // Multi-Step Enquiry Form
+      // ============================================
+      const enquiryForm = document.getElementById('enquiryForm');
+      const formSteps = document.querySelectorAll('.form-step');
+      const progressSteps = document.querySelectorAll('.progress-step');
+      const progressLines = document.querySelectorAll('.progress-line');
+      const nextButtons = document.querySelectorAll('.next-step');
+      const prevButtons = document.querySelectorAll('.prev-step');
+      const resetFormBtn = document.getElementById('resetForm');
+      
+      let currentStep = 1;
+      
+      function showStep(step) {
+        formSteps.forEach(s => s.classList.add('hidden'));
+        formSteps.forEach(s => {
+          if (parseInt(s.getAttribute('data-step')) === step) {
+            s.classList.remove('hidden');
+          }
+        });
+        
+        progressSteps.forEach(s => {
+          const stepNum = parseInt(s.getAttribute('data-step'));
+          s.classList.remove('active', 'completed');
+          if (stepNum === step) s.classList.add('active');
+          if (stepNum < step) s.classList.add('completed');
+        });
+        
+        progressLines.forEach(l => {
+          const lineNum = parseInt(l.getAttribute('data-line'));
+          l.classList.remove('completed');
+          if (lineNum < step) l.classList.add('completed');
+        });
+      }
+      
+      function validateStep(step) {
+        let isValid = true;
+        const currentStepEl = document.querySelector(`.form-step[data-step="${step}"]`);
+        const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
+        
+        inputs.forEach(input => {
+          const errorMsg = input.parentElement.querySelector('.error-message');
+          input.classList.remove('error');
+          if (errorMsg) errorMsg.classList.add('hidden');
+          
+          let fieldValid = true;
+          
+          if (!input.value.trim()) {
+            fieldValid = false;
+          } else if (input.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            fieldValid = emailRegex.test(input.value);
+          } else if (input.type === 'tel') {
+            const phoneRegex = /^[\d\s\+\-\(\)]{7,20}$/;
+            fieldValid = phoneRegex.test(input.value);
+          }
+          
+          if (!fieldValid) {
+            isValid = false;
+            input.classList.add('error');
+            if (errorMsg) errorMsg.classList.remove('hidden');
+          }
+        });
+        
+        return isValid;
+      }
+      
+      nextButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (validateStep(currentStep)) {
+            currentStep = parseInt(btn.getAttribute('data-next'));
+            showStep(currentStep);
+          }
+        });
+      });
+      
+      prevButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentStep = parseInt(btn.getAttribute('data-prev'));
+          showStep(currentStep);
+        });
+      });
+      
+      enquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (validateStep(currentStep)) {
+          currentStep = 'success';
+          formSteps.forEach(s => s.classList.add('hidden'));
+          document.querySelector('.form-step[data-step="success"]').classList.remove('hidden');
+          progressSteps.forEach(s => {
+            s.classList.remove('active');
+            s.classList.add('completed');
+          });
+          progressLines.forEach(l => l.classList.add('completed'));
+        }
+      });
+      
+      resetFormBtn.addEventListener('click', () => {
+        enquiryForm.reset();
+        currentStep = 1;
+        showStep(currentStep);
+        document.querySelectorAll('.form-input').forEach(input => input.classList.remove('error'));
+        document.querySelectorAll('.error-message').forEach(msg => msg.classList.add('hidden'));
+      });
+      
+      // ============================================
+      // Newsletter Form
+      // ============================================
+      const newsletterForm = document.getElementById('newsletterForm');
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('newsletterEmail').value;
+        if (email) {
+          alert('Thank you for subscribing to UniverseGroups updates.');
+          newsletterForm.reset();
+        }
+      });
+      
+      // ============================================
+      // Back to Top Button
+      // ============================================
+      const backToTop = document.getElementById('backToTop');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+      
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      
+      // ============================================
+      // Current Year
+      // ============================================
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      
+      // ============================================
+      // Lazy Image Loading Enhancement
+      // ============================================
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      
+      if ('loading' in HTMLImageElement.prototype) {
+        lazyImages.forEach(img => {
+          img.setAttribute('loading', 'lazy');
+        });
+      } else {
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src || img.src;
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+        lazyImages.forEach(img => imageObserver.observe(img));
+      }
+      
+      // ============================================
+      // Accessibility: Trap focus in modals
+      // ============================================
+      function trapFocus(element) {
+        const focusable = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        
+        element.addEventListener('keydown', (e) => {
+          if (e.key !== 'Tab') return;
+          
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        });
+      }
+      
+      trapFocus(mobileDrawer);
+      trapFocus(companyModal);
+      trapFocus(videoModal);
+      
+    });
+  </script>
+</body>
+</html>
